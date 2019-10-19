@@ -1,0 +1,26 @@
+{% extends "../layouts/layout.twig" %}
+
+{% block headTitle %}
+Uphoff On Media
+{% endblock headTitle %}
+
+{% block routeHeader %}
+  <div class="row align-items-center">
+    <div class="mb-2 mb-md-0 col-md-6 col-lg-4">
+      <h1>
+        <span class="sr-only">Uphoff on Media</span>
+        <img src="/assets/img/uom-logo-800x274.png" class="img-fluid" alt="Uphoff on Media">
+      </h1>
+  
+    </div>
+    <div class="col-md-6 col-lg-4 offset-lg-4 col-xl-3 offset-xl-5 ">
+      <p class="lead text-center">
+        Observations, insights and the occasional rant from the intersection of media, marketing and tech.
+      </p>
+  
+    </div>
+  </div>
+{% endblock routeHeader %}
+{% block mainContent %}
+{% include "../partials/list.twig" with {posts: posts} %}
+{% endblock mainContent %}

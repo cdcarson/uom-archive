@@ -1,0 +1,14 @@
+{% extends "../layouts/layout.twig" %}
+
+{% block headTitle %}
+Uphoff On Media
+{% endblock headTitle %}
+
+{% block routeHeader %}
+<div class="row align-items-center">
+  <h1>{{archiveTitle}}</h1>
+</div>
+{% endblock routeHeader %}
+{% block mainContent %}
+{% include "../partials/list.twig" with {posts: posts} %}
+{% endblock mainContent %}

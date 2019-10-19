@@ -1,0 +1,38 @@
+// @import url('https://fonts.googleapis.com/css?family=Jomolhari&display=swap');
+// $font-family-base: 'Jomolhari', serif;
+// $font-size-base:  1.3rem;
+$enable-responsive-font-sizes: true;
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.adj-post {
+  width: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.route-header {
+  padding: 3rem 0;
+  border-bottom: 1px solid $gray-400;
+  h2 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+ 
+}
+
+.posts-list {
+  >article {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $gray-400;
+    &:last-child {
+      border-bottom: 0px solid $gray-400;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+.site-footer {
+   padding: 2rem 0;
+  border-top: 1px solid $gray-400;
+}

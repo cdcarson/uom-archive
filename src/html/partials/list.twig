@@ -1,0 +1,23 @@
+<div class="posts-list">
+  
+  {% for post in posts %}
+
+  <article>
+    <header class="content-header">
+      <h2>
+        <a href="{{post.relativeURL}}">{{post.title}}</a>
+      </h2>
+      <p class="text-muted">
+        Posted on {{post.date}} by {{post.author.author_display_name}}
+      </p>
+      <p>
+        {{post.excerpt}}...
+        <a href="{{post.relativeURL}}">Read</a>
+      </p>
+    </header>
+
+  </article>
+
+  {% endfor %}
+
+</div>
