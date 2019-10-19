@@ -16,13 +16,13 @@ gulp.task('css', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./dst/assets/css'))
+    .pipe(gulp.dest('./docs/assets/css'))
 })
 
 gulp.task('img', () => {
   
   return gulp.src('./src/assets/img/**')
-    .pipe(gulp.dest('./dst/assets/img/'));
+    .pipe(gulp.dest('./docs/assets/img/'));
 })
 
 gulp.task('watch', gulp.series('img', 'css', 'html', () => {

@@ -79,12 +79,12 @@ module.exports = build = async () => {
     });
     posts.forEach(async post => {
       const html = await render('./src/html/types/post.twig', { post });
-      const out = path.join(process.cwd(), 'dst', ...post.slugs, 'index.html');
+      const out = path.join(process.cwd(), 'docs', ...post.slugs, 'index.html');
       await fs.outputFile(out, html);
     });
 
     const html = await render('./src/html/types/home.twig', {posts});
-    const out = path.join(process.cwd(), 'dst', 'index.html');
+    const out = path.join(process.cwd(), 'docs', 'index.html');
     await fs.outputFile(out, html);
 
     const archives = [];
@@ -130,7 +130,7 @@ module.exports = build = async () => {
 
     archives.forEach(async archive => {
       const html = await render('./src/html/types/archive.twig', archive);
-      const out = path.join(process.cwd(), 'dst', ...archive.slugs, 'index.html');
+      const out = path.join(process.cwd(), 'docs', ...archive.slugs, 'index.html');
       await fs.outputFile(out, html);
     })
     
